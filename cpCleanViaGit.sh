@@ -6,12 +6,6 @@ REPO_NAME=$3
 REMOTE_REPO=${REPO_NAME}.git
 CUR_DIR=`pwd`
 
-echo MASTER: $MASTER
-echo TMP_DIR: $TMP_DIR
-echo REPO_NAME: $REPO_NAME
-echo REMOTE_REPO: $REMOTE_REPO
-echo CURR_DIR: $CUR_DIR
-
 cd $MASTER
 MASTER=`pwd`
 CUR_BRANCH=`git branch | sed -e '/^ /d' -e 's/^..//'`
