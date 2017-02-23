@@ -8,10 +8,7 @@ CUR_DIR=`pwd`
 
 cd $MASTER
 MASTER=`pwd`
-echo HELLOHELLO
-echo GB $GIT_BRANCH
-echo GLB $GIT_LOCAL_BRANCH
-CUR_BRANCH=${GIT_BRANCH:-`git branch | sed -e '/^ /d' -e 's/^..//'`}
+CUR_BRANCH=`git rev-parse HEAD | sed -e '/^ /d' -e 's/^..//'`
 
 cd $TMP_DIR                               &&
 mkdir ${REMOTE_REPO}                      &&
