@@ -8,7 +8,7 @@ CUR_DIR=`pwd`
 
 cd $MASTER
 MASTER=`pwd`
-CUR_BRANCH=`git branch | sed -e '/^ /d' -e 's/^..//'`
+CUR_BRANCH=${GIT_LOCAL_BRANCH:-`git branch | sed -e '/^ /d' -e 's/^..//'`}
 
 cd $TMP_DIR                               &&
 mkdir ${REMOTE_REPO}                      &&
