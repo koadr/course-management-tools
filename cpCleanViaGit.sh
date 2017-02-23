@@ -8,7 +8,8 @@ CUR_DIR=`pwd`
 
 cd $MASTER
 MASTER=`pwd`
-CUR_BRANCH=`git rev-parse HEAD | sed -e '/^ /d' -e 's/^..//'`
+#CUR_BRANCH=`git rev-parse HEAD | sed -e '/^ /d' -e 's/^..//'`
+CUR_BRANCH="master"
 
 cd $TMP_DIR                               &&
 mkdir ${REMOTE_REPO}                      &&
